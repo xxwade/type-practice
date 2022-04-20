@@ -1,0 +1,17 @@
+lockfileVersion: 5.3
+
+specifiers:
+  typescript: ^4.6.3
+
+devDependencies:
+  typescript: registry.npmmirror.com/typescript/4.6.3
+
+packages:
+
+  registry.npmmirror.com/typescript/4.6.3:
+    resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-4.6.3.tgz}
+    name: typescript
+    version: 4.6.3
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
