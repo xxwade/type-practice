@@ -15,3 +15,7 @@ type TodoPreview = Omit<Todo, 'description' | 'title'>
 const todo: TodoPreview = {
   completed: false,
 }
+
+type K1 = 'a' | 'b' | 'c'
+type K2 = 'a'
+type K3 = Exclude<K1, K2>
