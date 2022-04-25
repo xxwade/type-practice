@@ -10,3 +10,15 @@ type arr2 = [3, 2, 1]
 
 type head1 = First<arr1> // expected to be 'a'
 type head2 = First<arr2> // expected to be 3
+
+
+
+
+type arr3 = ['a', 'b', 'c']
+type arr4 = [3, 2, 1]
+
+export type Last<T extends unknown[]> = T extends [...unknown[], infer Last] ? Last : never
+
+type tail1 = Last<arr1> // expected to be 'c'
+type tail2 = Last<arr2> // expected to be 1
+
