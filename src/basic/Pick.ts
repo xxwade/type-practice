@@ -24,3 +24,13 @@ const todo: TodoPreview = {
     title: 'Clean room',
     completed: false,
 }
+
+
+type OnlyBoolean = PickByType<{
+  name: string
+  count: number
+  isReadonly: boolean
+  isEnable: boolean
+}, boolean> // { isReadonly: boolean; isEnable: boolean; }
+
+export type PickByType<T extends {[k: string]: any}, U> = {[P in keyof T as T[P] extends U ? P : never]: T[P]}
