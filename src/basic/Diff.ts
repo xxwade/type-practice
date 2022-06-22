@@ -10,7 +10,7 @@ const obj2={
   f:9
 }
 
-type Diff<A, B> = {
+export type Diff<A, B> = {
   [K in Exclude<keyof A,keyof B>]: A[K]
 } & {
   [K in Exclude<keyof B,keyof A>]: B[K]

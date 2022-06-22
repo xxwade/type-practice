@@ -1,4 +1,4 @@
-type Chainable<T extends object = {}> = {
+export type Chainable<T extends object = {}> = {
   option<K extends string | number | symbol, V>(key: K, value: V): Chainable<T & {[k in K]: V}>
   get: () => T,
 }
