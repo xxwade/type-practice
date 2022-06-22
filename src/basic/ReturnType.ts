@@ -9,4 +9,4 @@ type a = MyReturnType<typeof fn> // should be "1 | 2"
 type b = ReturnType<typeof fn> // should be "1 | 2"
 
 
-type MyReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer P ? P : never
+export type MyReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer P ? P : never

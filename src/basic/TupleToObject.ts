@@ -1,4 +1,4 @@
-type TupleToObject<T extends readonly any[]> = {[P in T[number]]: P}
+export type TupleToObject<T extends readonly any[]> = {[P in T[number]]: P}
 
 const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 type TupleType = keyof typeof tuple   // '0' | '1' | '2' | '3'
