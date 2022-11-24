@@ -1,6 +1,6 @@
 export type Chainable<T extends object = {}> = {
   option<K extends string | number | symbol, V>(key: K, value: V): Chainable<T & {[k in K]: V}>
-  get: () => T,
+  get: () => {[P in keyof T]: T[P]},
 }
 
 type EmptyObject<T> = keyof T extends keyof {} ? true : false;

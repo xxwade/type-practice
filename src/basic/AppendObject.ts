@@ -6,3 +6,10 @@ export type AppendToObject<T, K extends string, V> = { [P in keyof T]: P extends
 
 
 
+export type AppendToObject2<T, K extends string, V> = T & { [P in K]: V }
+type ToObject<T extends object> = {[P in keyof T]: T[P]}
+
+type AppendToObject22 = ToObject<AppendToObject2<Test, 'value', 4>> // expected to be { id: '1', value: 4 }
+
+const appendToObject3: AppendToObject22 = { id: '1', value: 4 }
+

@@ -7,4 +7,5 @@ type Result = AppendArgument<Fn, boolean>
 
 export type AppendArgument<F extends (...args: any[]) => any, T> = F extends (...args: infer U) => infer R ? (...args: [...U, T]) => R : never
 
-// export type AppendArgument<F extends (...args: any) => any, T> = F extends (...args: infer P) => infer R ?  (...args: [...P, T]) => R : never
+export type AppendArgument2<F extends (...args: any[]) => any, T> = (...args: [...Parameters<F>, T]) => ReturnType<F>
+type Result2 = AppendArgument2<Fn, boolean> 
